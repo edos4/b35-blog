@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<img src="<%= image_path('eva.png')%>" width="100px">
+<h1>Animes</h1>
+Message is: <%= @message %>
+
+<div id="animes">
+  <% @animes.each do |anime| %>
+    <%= render anime %>
+    <p>
+      <%= link_to "Show this anime", anime %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New anime", new_anime_path %>

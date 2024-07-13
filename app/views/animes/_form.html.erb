@@ -1,0 +1,37 @@
+<%= form_with(model: anime) do |form| %>
+  <% if anime.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(anime.errors.count, "error") %> prohibited this anime from being saved:</h2>
+
+      <ul>
+        <% anime.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :main_character, style: "display: block" %>
+    <%= form.text_field :main_character %>
+  </div>
+
+  <div>
+    <%= form.label :year_created, style: "display: block" %>
+    <%= form.number_field :year_created %>
+  </div>
+
+  <div>
+    <%= form.label :synopsis, style: "display: block" %>
+    <%= form.text_area :synopsis %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
