@@ -1,6 +1,6 @@
 require "test_helper"
 
-class AnimalTest < ActiveSupport::TestCase
+class SecuredAssetTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
