@@ -2,6 +2,8 @@ require "test_helper"
 
 class SecuredAssetsControllerTest < ActionDispatch::IntegrationTest
   setup do
+    @user = users(:one) # Assuming you have fixtures or factories set up
+    sign_in @user
     @secured_asset = secured_assets(:one)
   end
 
