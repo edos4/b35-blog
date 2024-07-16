@@ -1,5 +1,6 @@
 class SecuredAssetsController < ApplicationController
   before_action :set_secured_asset, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /secured_assets or /secured_assets.json
   def index
