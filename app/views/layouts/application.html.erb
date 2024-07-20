@@ -12,6 +12,9 @@
 
   <body>
     header po ako
+    <% if current_user.present? %>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+    <% end %>
     <%= yield %>
     footer po ako
   </body>
