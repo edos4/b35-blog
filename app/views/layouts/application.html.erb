@@ -12,7 +12,9 @@
 
   <body>
     header po ako
-    may user ba na naka login?: <%= current_user.present? %>
+    <% if current_user.present? %>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+    <% end %>
     <%= yield %>
     footer po ako
   </body>
