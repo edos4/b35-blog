@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "SecuredAssets", type: :system do
+RSpec.describe "SecuredAssets", driver: :selenium_chrome, js: true do
   let(:user) { create(:user) }
   let(:secured_asset) { create(:secured_asset) }
 

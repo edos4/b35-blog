@@ -55,6 +55,7 @@ group :development, :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "factory_bot"
 end
 
 group :development do
